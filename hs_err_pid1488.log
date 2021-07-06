@@ -1,0 +1,251 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x0000000057911c38, pid=1488, tid=15736
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_79-b15) (build 1.7.0_79-b15)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# V  [jvm.dll+0xf1c38]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002bc2000):  GCTaskThread [stack: 0x0000000007670000,0x0000000007770000] [id=15736]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x00000007e8cab500
+
+Registers:
+RAX=0x00000007e8cab501, RBX=0x00000007af8d8538, RCX=0x0000000000000003, RDX=0x00000000fd1956a0
+RSP=0x000000000776f850, RBP=0x0000000011f331c0, RSI=0x00000006fc481d00, RDI=0x00000007af8d8528
+R8 =0x00000007e8cab500, R9 =0x0000000000000000, R10=0xf5ddb48d00000000, R11=0x00000007af8d8460
+R12=0x00000006fc481d00, R13=0x00000007af8d8510, R14=0x0000000000000000, R15=0x0000000002bbf8b0
+RIP=0x0000000057911c38, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x000000000776f850)
+0x000000000776f850:   00000007af8d8509 00000007af8d8509
+0x000000000776f860:   00000007acc64fb8 00000000578e6c14
+0x000000000776f870:   0000000000000001 0000000057de9c70
+0x000000000776f880:   00000007af8d8510 0000000057bc4f3e
+0x000000000776f890:   00000007aefb2f70 0000000000000006
+0x000000000776f8a0:   0000000011f331c0 00000000578e6e91
+0x000000000776f8b0:   0000000002bb7350 0000000002b97d20
+0x000000000776f8c0:   00000007af8d846c 0000000057911ca9
+0x000000000776f8d0:   0000000000000000 0000000002bb7301
+0x000000000776f8e0:   0000000057de9c70 0000000057bc5030
+0x000000000776f8f0:   00000007af8d8508 0000000000000000
+0x000000000776f900:   0000000011f331c0 0000000016c827f0
+0x000000000776f910:   00000007af8d8508 0000000057bc5a75
+0x000000000776f920:   0000000011f331c0 0000000057bc8183
+0x000000000776f930:   00000007af8d8460 0000000057bc4f3e
+0x000000000776f940:   00000007aeebcf38 0000000011f331c0 
+
+Instructions: (pc=0x0000000057911c38)
+0x0000000057911c18:   94 5c 60 00 8b c2 48 d3 e0 49 03 c1 48 3b 05 f5
+0x0000000057911c28:   e3 66 00 0f 93 c0 84 c0 74 77 44 8b c2 49 d3 e0
+0x0000000057911c38:   4b 8b 04 08 24 03 3c 03 75 57 4f 8b 04 08 80 3d
+0x0000000057911c48:   21 a5 60 00 00 74 0f 41 0f b6 c0 24 07 3c 05 75 
+
+
+Register to memory mapping:
+
+RAX=0x00000007e8cab501 is an unallocated location in the heap
+RBX=0x00000007af8d8538 is an unknown value
+RCX=0x0000000000000003 is an unknown value
+RDX=0x00000000fd1956a0 is an unknown value
+RSP=0x000000000776f850 is an unknown value
+RBP=0x0000000011f331c0 is an unknown value
+RSI=0x00000006fc481d00 is pointing into object: 0x00000006fc481aa0
+{instance class} 
+ - klass: {other class}
+RDI=0x00000007af8d8528 is an unknown value
+R8 =0x00000007e8cab500 is an unallocated location in the heap
+R9 =0x0000000000000000 is an unknown value
+R10=0xf5ddb48d00000000 is an unknown value
+R11=0x00000007af8d8460 is an oop
+java.lang.Class 
+ - klass: 'java/lang/Class'
+R12=0x00000006fc481d00 is pointing into object: 0x00000006fc481aa0
+{instance class} 
+ - klass: {other class}
+R13=0x00000007af8d8510 is an oop
+java.lang.invoke.MemberName 
+ - klass: 'java/lang/invoke/MemberName'
+R14=0x0000000000000000 is an unknown value
+R15=0x0000000002bbf8b0 is an unknown value
+
+
+Stack: [0x0000000007670000,0x0000000007770000],  sp=0x000000000776f850,  free space=1022k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0xf1c38]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000014267000 JavaThread "rebel-weak-reaper" daemon [_thread_blocked, id=16000, stack(0x00000000147a0000,0x00000000148a0000)]
+  0x0000000014268800 JavaThread "rebel-cache-writer" daemon [_thread_blocked, id=29052, stack(0x00000000146a0000,0x00000000147a0000)]
+  0x0000000014264000 JavaThread "rebel-fsnotify-OutputReader" daemon [_thread_in_native, id=27908, stack(0x0000000015b90000,0x0000000015c90000)]
+  0x0000000014268000 JavaThread "rebel-fsnotify-OutputReader" daemon [_thread_in_native, id=2000, stack(0x0000000015a90000,0x0000000015b90000)]
+  0x0000000014262000 JavaThread "rebel-fsnotify-ShutdownOnTermination" daemon [_thread_blocked, id=31320, stack(0x0000000015990000,0x0000000015a90000)]
+  0x000000001408f000 JavaThread "rebel-CacheKeepAlive" daemon [_thread_blocked, id=31152, stack(0x00000000151a0000,0x00000000152a0000)]
+  0x000000001408d800 JavaThread "rebel-logger" daemon [_thread_blocked, id=24584, stack(0x00000000150a0000,0x00000000151a0000)]
+  0x0000000011feb000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=21784, stack(0x0000000013da0000,0x0000000013ea0000)]
+  0x0000000011fe6000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=34424, stack(0x0000000013ca0000,0x0000000013da0000)]
+  0x0000000011fe4000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=24808, stack(0x0000000013ba0000,0x0000000013ca0000)]
+  0x0000000011fd3000 JavaThread "Attach Listener" daemon [_thread_blocked, id=15332, stack(0x0000000013aa0000,0x0000000013ba0000)]
+  0x0000000011fd2800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=16568, stack(0x00000000139a0000,0x0000000013aa0000)]
+  0x0000000002c8c800 JavaThread "Finalizer" daemon [_thread_blocked, id=23296, stack(0x00000000138a0000,0x00000000139a0000)]
+  0x00000000105ad000 JavaThread "Reference Handler" daemon [_thread_blocked, id=31012, stack(0x00000000137a0000,0x00000000138a0000)]
+  0x0000000002b98800 JavaThread "main" [_thread_blocked, id=33072, stack(0x0000000002a50000,0x0000000002b50000)]
+
+Other Threads:
+  0x0000000011f36000 VMThread [stack: 0x00000000136a0000,0x00000000137a0000] [id=15336]
+
+=>0x0000000002bc2000 (exited) GCTaskThread [stack: 0x0000000007670000,0x0000000007770000] [id=15736]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000000002b919d0] Threads_lock - owner thread: 0x0000000011f36000
+[0x0000000002b91c50] Heap_lock - owner thread: 0x0000000002b98800
+
+Heap
+ PSYoungGen      total 76288K, used 65536K [0x00000007ab200000, 0x00000007b0700000, 0x0000000800000000)
+  eden space 65536K, 100% used [0x00000007ab200000,0x00000007af200000,0x00000007af200000)
+  from space 10752K, 0% used [0x00000007afc80000,0x00000007afc80000,0x00000007b0700000)
+  to   space 10752K, 66% used [0x00000007af200000,0x00000007af8fbc98,0x00000007afc80000)
+ ParOldGen       total 173568K, used 0K [0x0000000701600000, 0x000000070bf80000, 0x00000007ab200000)
+  object space 173568K, 0% used [0x0000000701600000,0x0000000701600000,0x000000070bf80000)
+ PSPermGen       total 21504K, used 14801K [0x00000006fc400000, 0x00000006fd900000, 0x0000000701600000)
+  object space 21504K, 68% used [0x00000006fc400000,0x00000006fd274610,0x00000006fd900000)
+
+Card table byte_map: [0x0000000005f00000,0x0000000006720000] byte_map_base: 0x000000000271e000
+
+Polling page: 0x0000000000da0000
+
+Code Cache  [0x0000000002e40000, 0x00000000030b0000, 0x0000000005e40000)
+ total_blobs=281 nmethods=0 adapters=256 free_code_cache=48681Kb largest_free_block=49849152
+
+Compilation events (0 events):
+No events
+
+GC Heap History (1 events):
+Event: 8.648 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 76288K, used 65536K [0x00000007ab200000, 0x00000007b0700000, 0x0000000800000000)
+  eden space 65536K, 100% used [0x00000007ab200000,0x00000007af200000,0x00000007af200000)
+  from space 10752K, 0% used [0x00000007afc80000,0x00000007afc80000,0x00000007b0700000)
+  to   space 10752K, 0% used [0x00000007af200000,0x00000007af200000,0x00000007afc80000)
+ ParOldGen       total 173568K, used 0K [0x0000000701600000, 0x000000070bf80000, 0x00000007ab200000)
+  object space 173568K, 0% used [0x0000000701600000,0x0000000701600000,0x000000070bf80000)
+ PSPermGen       total 21504K, used 14801K [0x00000006fc400000, 0x00000006fd900000, 0x0000000701600000)
+  object space 21504K, 68% used [0x00000006fc400000,0x00000006fd274610,0x00000006fd900000)
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 8.570 Thread 0x0000000002b98800 Threw 0x00000007aedde198 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 8.570 Thread 0x0000000002b98800 Threw 0x00000007aede9e28 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 8.570 Thread 0x0000000002b98800 Threw 0x00000007aedea7f0 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 8.571 Thread 0x0000000002b98800 Threw 0x00000007aedff688 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 8.571 Thread 0x0000000002b98800 Threw 0x00000007aedffde8 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 8.572 Thread 0x0000000002b98800 Threw 0x00000007aee0d0f8 at C:\re\jdk7u79\2331\hotspot\src\share\vm\prims\jvm.cpp:1304
+Event: 8.575 Thread 0x0000000002b98800 Threw 0x00000007aee6b7f8 at C:\re\jdk7u79\2331\hotspot\src\share\vm\classfile\systemDictionary.cpp:183
+Event: 8.593 Thread 0x0000000002b98800 Threw 0x00000007aef6f570 at C:\re\jdk7u79\2331\hotspot\src\share\vm\classfile\systemDictionary.cpp:185
+Event: 8.600 Thread 0x0000000002b98800 Threw 0x00000007aefb30d0 at C:\re\jdk7u79\2331\hotspot\src\share\vm\classfile\systemDictionary.cpp:185
+Event: 8.623 Thread 0x0000000002b98800 Threw 0x00000007af06df50 at C:\re\jdk7u79\2331\hotspot\src\share\vm\classfile\systemDictionary.cpp:185
+
+Events (10 events):
+Event: 8.646 loading class 0x0000000002c00ad0 done
+Event: 8.647 loading class 0x000000001404fdb0
+Event: 8.647 loading class 0x000000001404fdb0 done
+Event: 8.647 loading class 0x0000000016c72000
+Event: 8.647 loading class 0x0000000016c72000 done
+Event: 8.647 loading class 0x0000000016c72050
+Event: 8.647 loading class 0x0000000016c72050 done
+Event: 8.647 loading class 0x0000000016c72250
+Event: 8.647 loading class 0x0000000016c72250 done
+Event: 8.648 Executing VM operation: ParallelGCFailedAllocation
+
+
+Dynamic libraries:
+0x00007ff657910000 - 0x00007ff657943000 	D:\worksoft\jdk\jdk1.7.0_79\bin\java.exe
+0x00007ffce74d0000 - 0x00007ffce76c5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffce6500000 - 0x00007ffce65bd000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffce4f00000 - 0x00007ffce51c8000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffce6da0000 - 0x00007ffce6e4c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffce6390000 - 0x00007ffce642e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffce7320000 - 0x00007ffce73bb000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffce5980000 - 0x00007ffce5aab000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffce57b0000 - 0x00007ffce5950000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffce5380000 - 0x00007ffce53a2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffce7460000 - 0x00007ffce748a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffce4df0000 - 0x00007ffce4efb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffce5280000 - 0x00007ffce531d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffce4c10000 - 0x00007ffce4d10000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffcd7850000 - 0x00007ffcd7aea000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1052_none_60b8f8fd71f5e8cb\COMCTL32.dll
+0x00007ffce5950000 - 0x00007ffce5980000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000058000000 - 0x00000000580d2000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\msvcr100.dll
+0x0000000057820000 - 0x0000000057ff5000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\server\jvm.dll
+0x00007ffce56d0000 - 0x00007ffce56d8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffcdc860000 - 0x00007ffcdc887000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffcc8980000 - 0x00007ffcc8989000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffce6430000 - 0x00007ffce649b000 	C:\WINDOWS\System32\WS2_32.dll
+0x0000000057810000 - 0x000000005781f000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\verify.dll
+0x00000000577e0000 - 0x0000000057808000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\java.dll
+0x00000000577a0000 - 0x00000000577d5000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\jdwp.dll
+0x0000000057790000 - 0x0000000057798000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\npt.dll
+0x00007ffcce660000 - 0x00007ffcce6ad000 	C:\Users\misaka\AppData\Roaming\JetBrains\IntelliJIdea2021.1\plugins\jr-ide-idea\lib\jrebel6\lib\jrebel64.dll
+0x00007ffce5c50000 - 0x00007ffce638f000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffce45e0000 - 0x00007ffce45ec000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+0x00007ffce6850000 - 0x00007ffce68fe000 	C:\WINDOWS\System32\shcore.dll
+0x00007ffce6900000 - 0x00007ffce6c55000 	C:\WINDOWS\System32\combase.dll
+0x0000000057760000 - 0x0000000057783000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\instrument.dll
+0x0000000057740000 - 0x0000000057755000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\zip.dll
+0x0000000057730000 - 0x0000000057739000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\dt_socket.dll
+0x00007ffce43f0000 - 0x00007ffce445a000 	C:\WINDOWS\system32\mswsock.dll
+0x0000000057720000 - 0x000000005772b000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\management.dll
+0x0000000057700000 - 0x000000005771a000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\net.dll
+0x00000000576e0000 - 0x00000000576f1000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\nio.dll
+0x00000000576b0000 - 0x00000000576d4000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\sunec.dll
+0x00007ffcd8680000 - 0x00007ffcd869b000 	C:\Users\misaka\.jrebel\jrebel-temp\ver-484fde9\IdeaWin64.dll
+0x00000000576a0000 - 0x00000000576ab000 	D:\worksoft\jdk\jdk1.7.0_79\jre\bin\sunmscapi.dll
+0x00007ffce53b0000 - 0x00007ffce550f000 	C:\WINDOWS\System32\CRYPT32.dll
+0x00007ffce3200000 - 0x00007ffce33e4000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+0x00007ffce4d60000 - 0x00007ffce4de3000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:61080,suspend=y,server=n -Drebel.base=C:\Users\misaka\.jrebel -Drebel.env.ide.plugin.version=2021.2.2 -Drebel.env.ide.version=2021.1.2 -Drebel.env.ide.product=IU -Drebel.env.ide=intellij -Drebel.notification.url=http://localhost:17434 -agentpath:C:\Users\misaka\AppData\Roaming\JetBrains\IntelliJIdea2021.1\plugins\jr-ide-idea\lib\jrebel6\lib\jrebel64.dll -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -javaagent:C:\Users\misaka\AppData\Local\JetBrains\IntelliJIdea2021.1\captureAgent\debugger-agent.jar -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dfile.encoding=UTF-8 
+java_command: com.zmkid.sell.SellApplication
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Java\jdk1.8.0_261
+CLASSPATH=.;D:\Java\jdk1.8.0_261\lib;D:\Java\jdk1.8.0_261\lib\tools.jar
+PATH=D:\worksoft\VmWare\bin\;D:\worksoft\apache-ant-1.9.15\bin;D:\worksoft\gradle-4.10.3-all\gradle-4.10.3\bin;D:\Java\jdk1.8.0_261\bin;D:\worksoft\Maven\apache-maven\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\worksoft\Git\cmd;D:\worksoft\Putty\;D:\worksoft\Node\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\misaka\AppData\Local\Microsoft\WindowsApps;C:\Users\misaka\AppData\Roaming\npm;
+USERNAME=misaka
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 
+
+CPU:total 16 (8 cores per cpu, 2 threads per core) family 6 model 165 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, erms, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 16681776k(4804544k free), swap 38701872k(20013432k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.79-b02) for windows-amd64 JRE (1.7.0_79-b15), built on Apr 10 2015 12:36:16 by "java_re" with unknown MS VC++:1600
+
+time: Tue Jul 06 09:42:50 2021
+elapsed time: 8 seconds
+

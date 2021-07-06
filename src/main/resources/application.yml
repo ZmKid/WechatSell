@@ -1,0 +1,45 @@
+spring:
+#  freemarker配置
+  freemarker:
+    allow-session-override: true
+    cache: true
+    charset: UTF-8
+    content-type: text/html;charset=UTF-8
+    expose-request-attributes: true
+    expose-session-attributes: true
+    expose-spring-macro-helpers: true
+    settings:
+      datetime_format: yyyy-MM-dd HH:mm:ss
+      default_encoding: UTF-8
+      number_format: 0.##########
+      template_exception_handler: ignore
+      template_update_delay: 0
+    suffix: .ftl
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.5.130/sell?characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+  #    设置sql语句打印出来
+  jpa:
+    show-sql: true
+  zmm:
+    name: 1
+    age: 1
+  #    当返回值为null时，不返回给前端
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  servlet:
+    context-path: /sell
+
+wechat:
+  mpAppId: wxac32ee48d2a93049
+  mpAppSecret: 3299ae440d3f36256fc17b4a61537375
+  openAppId: wx6ad144e54af67d87
+  openAppSecret: 91a2ff6d38a2bbccfb7e9xxxxxx
+  mchId: 1528727741
+  mchKey: shanximubeixinxijishuyouxiangong
+  keyPath: D:/studydoc/Spring Boot企业微信点餐系统/apiclient_cert.p12
+  notifyUrl: http://zmsell.natapp1.cc/sell/pay/notify
