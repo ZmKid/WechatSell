@@ -44,15 +44,12 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Page<ProductInfo> findAll(Pageable pageable) {
-        int pageNo = 1;
-        int pageSize = 100;
-        Pageable page = PageRequest.of(pageNo - 1, pageSize);
-        return null;
+        return productInfoRepository.findAll(pageable);
     }
 
     @Override
     public ProductInfo save(ProductInfo productInfo) {
-        return null;
+        return productInfoRepository.save(productInfo);
     }
 
     @Override

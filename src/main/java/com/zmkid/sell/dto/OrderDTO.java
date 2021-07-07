@@ -1,8 +1,12 @@
 package com.zmkid.sell.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.zmkid.sell.entity.OrderDetail;
+import com.zmkid.sell.enums.OrderStatusEnum;
+import com.zmkid.sell.enums.PayStatusEnum;
+import com.zmkid.sell.util.EnumUtil;
 import com.zmkid.sell.util.serializer.DateLongSerializer;
 import lombok.Data;
 
@@ -47,4 +51,14 @@ public class OrderDTO {
     private Date updateTime;
 
     List<OrderDetail> orderDetailList;
+
+    @JsonIgnore
+    public OrderStatusEnum getOrderStatusEnum() {
+        return EnumUtil.getCode(orderStatus, OrderStatusEnum.class);
+    }
+
+    @JsonIgnore
+    public PayStatusEnum getPayStatusEnum() {
+        return EnumUtil.getCode(payStatus, PayStatusEnum.class);
+    }
 }
